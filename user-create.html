@@ -18,6 +18,10 @@
 </head>
 
 <body>
+
+
+
+
 <!-- ============================================================== -->
 <!-- main wrapper -->
 <!-- ============================================================== -->
@@ -28,7 +32,7 @@
     <!-- ============================================================== -->
     <div class="dashboard-header">
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
-            <a class="navbar-brand" href="index.html">Cybertek</a>
+            <a class="navbar-brand" href="index.html">Halmurat _ Ticketing _ Project</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,11 +40,11 @@
                 <ul class="navbar-nav ml-auto navbar-right-top">
                     <li class="nav-item dropdown nav-user">
                         <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"/>
+                            <i class="fas fa-home"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                             <div class="nav-user-info">
-                                <h5 class="mb-0 text-white nav-user-name">John Abraham</h5>
+                                <h5 class="mb-0 text-white nav-user-name">Halmurat Tahir</h5>
                                 <span class="status"></span>
                                 <span class="ml-2">Available</span>
                             </div>
@@ -142,165 +146,307 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content">
-                <h2 class="pageheader-title">
-                    Welcome to Create User
+                <h2 class="User-Create">
+                    User Create
                 </h2>
-                <div class="row">
-                    <!-- ============================================================== -->
-                    <!-- validation form -->
-                    <!-- ============================================================== -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">User Information</h5>
-                            <div class="card-body">
-                                <form class="needs-validation" novalidate>
-                                    <div class="row">
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="validationCustom01">First name</label>
-                                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
-                                            <div class="valid-feedback">
-                                                Looks good!
+                <!-- Modal -->
+                <div class="modal fade" id="createUser" tabindex="-1" aria-labelledby="createUser" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" >Creating User ...</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                                    <form>
+                                        <div class="row">
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="firstName">First name</label>
+                                                <input type="text" class="form-control" id="firstName" placeholder="Enter First name" required>
+                                                <div class="valid-feedback">
+                                                    Cool Name!
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="LastName">Last name</label>
+                                                <input type="text" class="form-control" id="LastName" placeholder="Enter Last name" required>
+                                                <div class="valid-feedback">
+                                                    Cool Last Name too!
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="email_Address">Email Address</label>
+                                                <input type="text" class="form-control" id="email_Address" placeholder="Enter Email Address" required>
+                                                <div class="valid-feedback">
+                                                    Cool Name!
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="phoneNumber">Phone Number</label>
+                                                <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Phone Number" required>
+                                                <div class="valid-feedback">
+                                                    Cool Last Name too!
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="password">Password</label>
+                                                <input type="text" class="form-control" id="password" placeholder="Enter password" required>
+                                                <div class="valid-feedback">
+                                                    Cool Name!
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="re-password">Password Confirmation</label>
+                                                <input type="text" class="form-control" id="re-password" placeholder="Re-Enter password" required>
+                                                <div class="valid-feedback">
+                                                    Cool Last Name too!
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="validationCustom02">Last name</label>
-                                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="validationCustom01">Email Address</label>
-                                            <input type="text" class="form-control" id="emailAddress" placeholder="Email Address" value="halmurat97@gmail.com" required>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="validationCustom02">Mobile Number</label>
-                                            <input type="text" class="form-control" id="Mobile Number" placeholder="Mobile Number" value="2828288" required>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="inputPassword">Password</label>
-                                            <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control"><br>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="inputRepeatPassword">Password Confirmation</label>
-                                            <input id="inputRepeatPassword" data-parsley-equalto="#inputPassword" type="password" required="" placeholder="re-enter password" class="form-control">
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <form>
-                                                <h5>Gender</h5>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="gender">Gender</label><br>
                                                 <label class="custom-control custom-radio custom-control-inline" data-children-count="1">
-                                                    <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Female</span>
+                                                    <input type="radio" id="gender" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Female</span>
                                                 </label>
                                                 <label class="custom-control custom-radio custom-control-inline" data-children-count="1">
                                                     <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
                                                 </label>
-                                            </form>
+                                            </div>
+
+
+                                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                <label for="RoleSelect">Role</label>
+                                                <select class="form-control" id="RoleSelect">
+                                                    <option value="select" selected="selected">Please Select</option>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="manager">Manager</option>
+                                                    <option value="employee">Employee</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <form>
-                                                <div class="form-group" data-children-count="1">
-                                                    <label for="input-select">Role</label>
-                                                    <select class="form-control" id="input-select">
-                                                        <option>Please Select</option>
-                                                        <option>Admin</option>
-                                                        <option>Manager</option>
-                                                        <option>Employee</option>
-                                                    </select>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <button type="button" class="btn btn-primary" id="right-panel-link" href="#right-panel">Save</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" name="insertUserData" class="btn btn-primary">Create</button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="card">
-                        <h5 class="card-header">User List</h5>
-                        <div class="card-body">
-                            <table class="table table-hover">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">E-Mail</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Role</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <th scope="row">John Kesy</th>
-                                    <td>jognkesy@gmail.com</td>
-                                    <td>Male</td>
-                                    <td>2828288</td>
-                                    <td>Admin</td>
-                                    <td>
-                                        <div class="btn-group ml-auto" >
-                                            <button class="btn btn-sm btn-outline-light" >Update</button>
-                                            <button class="btn btn-sm btn-outline-light">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Harry Potter</th>
-                                    <td>harrypotter@gmail.com</td>
-                                    <td>Male</td>
-                                    <td>2828288</td>
-                                    <td>Employee</td>
-                                    <td>
-                                        <div class="btn-group ml-auto">
-                                            <button class="btn btn-sm btn-outline-light">Update</button>
-                                            <button class="btn btn-sm btn-outline-light">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Muradil Mijit</th>
-                                    <td>miradilmijit@gmail.com</td>
-                                    <td>Male</td>
-                                    <td>2828288</td>
-                                    <td>Manager</td>
-                                    <td>
-                                        <div class="btn-group ml-auto">
-                                            <button class="btn btn-sm btn-outline-light">Update</button>
-                                            <button class="btn btn-sm btn-outline-light">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Adil Mijit</th>
-                                    <td>adilmijit@gmail.com</td>
-                                    <td>Male</td>
-                                    <td>2828288</td>
-                                    <td>Manager</td>
-                                    <td>
-                                        <div class="btn-group ml-auto">
-                                            <button class="btn btn-sm btn-outline-light">Update</button>
-                                            <button class="btn btn-sm btn-outline-light">Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end validation form -->
-                    <!-- ============================================================== -->
                 </div>
+                <!-- Button trigger modal -->
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                        <div class="card-body">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createUser">
+                                Create User
+                            </button>
+                        </div>
+                </div>
+                    <!-- ============================================================== -->
+
+
+
+
+
+
+<!--                new code on class       -->
+
+                <div class="row">
+
+<!--                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                        <h2 class="UserCreation">-->
+<!--                            User Creation-->
+<!--                        </h2>-->
+<!--                        <form>-->
+<!--                            <div class="row">-->
+
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom01">First name</label>-->
+<!--                                    <input type="text" class="form-control" id="firstName" placeholder="Enter First name" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Name!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom02">Last name</label>-->
+<!--                                    <input type="text" class="form-control" id="LastName" placeholder="Enter Last name" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Last Name too!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom01">Email Address</label>-->
+<!--                                    <input type="text" class="form-control" id="email_Address" placeholder="Enter Email Address" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Name!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom02">Phone Number</label>-->
+<!--                                    <input type="text" class="form-control" id="PhoneNumber" placeholder="Enter Phone Number" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Last Name too!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom01">Password</label>-->
+<!--                                    <input type="text" class="form-control" id="password" placeholder="Enter password" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Name!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom02">Password Confirmation</label>-->
+<!--                                    <input type="text" class="form-control" id="re-password" placeholder="Re-Enter password" required>-->
+<!--                                    <div class="valid-feedback">-->
+<!--                                        Cool Last Name too!-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="validationCustom01">Gender</label><br>-->
+<!--                                    <label class="custom-control custom-radio custom-control-inline" data-children-count="1">-->
+<!--                                        <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Female</span>-->
+<!--                                    </label>-->
+<!--                                    <label class="custom-control custom-radio custom-control-inline" data-children-count="1">-->
+<!--                                        <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>-->
+<!--                                    </label>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <label for="input-select">Role</label>-->
+<!--                                    <select class="form-control" id="RoleSelect">-->
+<!--                                        <option value="select" selected="selected">Please Select</option>-->
+<!--                                        <option value="admin">Admin</option>-->
+<!--                                        <option value="manager">Manager</option>-->
+<!--                                        <option value="employee">Employee</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">-->
+<!--                                    <div class="float-right">-->
+<!--                                        <button class="btn btn-success rounded-50" type="button" >Save</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h2 class="User-List">
+                            User List
+                        </h2>
+                            <div class="card-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">E-Mail</th>
+                                        <th scope="col">Gender</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">John Kesy</th>
+                                        <td>jognkesy@gmail.com</td>
+                                        <td>Male</td>
+                                        <td>2828288</td>
+                                        <td>Admin</td>
+                                        <td class="actions">
+                                            <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                            <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Harry Potter</th>
+                                        <td>harrypotter@gmail.com</td>
+                                        <td>Male</td>
+                                        <td>2828288</td>
+                                        <td>Employee</td>
+                                        <td class="actions">
+                                            <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                            <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Muradil Mijit</th>
+                                        <td>miradilmijit@gmail.com</td>
+                                        <td>Male</td>
+                                        <td>2828288</td>
+                                        <td>Manager</td>
+                                        <td class="actions">
+                                            <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                            <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Adil Mijit</th>
+                                        <td>adilmijit@gmail.com</td>
+                                        <td>Male</td>
+                                        <td>2828288</td>
+                                        <td>Manager</td>
+                                        <td class="actions">
+                                            <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                            <a href="" class="delete-row"><button type="button" class="btn btn-secondary btn-sm">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- footer -->
+                <footer class="page-footer font-small blue fixed-bottom">
+                    <div class="footer-copyright text-center py-3">© 2020 Halmurat – All Rights Reserved</div>
+                </footer>
             </div>
 
 
@@ -310,6 +456,7 @@
     <!-- end main wrapper  -->
     <!-- ============================================================== -->
 </div>
+
 <!-- Optional JavaScript -->
 <!-- jquery 3.3.1 -->
 <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
@@ -331,7 +478,6 @@
 <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
 <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
 <script src="assets/libs/js/dashboard-ecommerce.js"></script>
-
 
 
 </body>
