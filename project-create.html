@@ -149,65 +149,89 @@
                 </h2>
                 <div class="row">
                     <!-- ============================================================== -->
-                    <!-- validation form -->
+                    <!-- project create form -->
                     <!-- ============================================================== -->
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="card">
-                            <h5 class="card-header">Project Information</h5>
-                            <div class="card-body">
-                                <form class="needs-validation" novalidate>
-                                    <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="projectName">Project name</label>
-                                            <input type="text" class="form-control" id="projectName"  required>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
+                            <h5 class="card-header">Project Creation Form</h5>
+                            <!-- Modal -->
+                            <div class="modal fade" id="createProject" tabindex="-1" aria-labelledby="createProject" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" >Creating Project ...</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="projectCode">Project code</label>
-                                            <input type="text" class="form-control" id="projectCode"  required>
-                                            <div class="valid-feedback">
-                                                Looks good!
+                                        <div class="modal-body">
+                                            <div class="card-body">
+                                                <form class="needs-validation" novalidate>
+                                                    <div class="row">
+                                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <label for="projectName">Project name</label>
+                                                            <input type="text" class="form-control" id="projectName"  required>
+                                                            <div class="valid-feedback">
+                                                                Looks good!
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <label for="projectCode">Project code</label>
+                                                            <input type="text" class="form-control" id="projectCode"  required>
+                                                            <div class="valid-feedback">
+                                                                Looks good!
 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <label for="projectCode">Assigned Manager</label><br>
+                                                            <select class="custom-select ml-auto w-auto">
+                                                                <option selected="">Please Select</option>
+                                                                <option value="1">Muradil Mijit</option>
+                                                                <option value="2">Adil Mijit</option>
+                                                                <option value="3">Harry Potter</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <div class="form-group" data-children-count="1">
+                                                                <label>Project Start Date<small class="text-muted" data-children-count="0"></small>
+                                                                </label>
+                                                                <input type="date" class="form-control date-inputmask" id="date-mask-1" placeholder="dd/mm/yyyy" style="text-align: right;" im-insert="true">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <div class="form-group" data-children-count="1">
+                                                                <label>Project End Date<small class="text-muted" data-children-count="0"></small>
+                                                                </label>
+                                                                <input type="date" class="form-control date-inputmask" id="date-mask-2" placeholder="dd/mm/yyyy" style="text-align: right;" im-insert="true">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                                                            <div class="form-group" data-children-count="1">
+                                                                <label for="exampleFormControlTextarea1">Project Detail</label>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" spellcheck="false"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                                            <label for="projectCode">Assigned Manager</label><br>
-                                            <select class="custom-select ml-auto w-auto">
-                                                <option selected="">Please Select</option>
-                                                <option value="1">Muradil Mijit</option>
-                                                <option value="2">Adil Mijit</option>
-                                                <option value="3">Harry Potter</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <div class="form-group" data-children-count="1">
-                                                <label>Project Start Date<small class="text-muted" data-children-count="0"></small>
-                                                </label>
-                                                <input type="date" class="form-control date-inputmask" id="date-mask-1" placeholder="dd/mm/yyyy" style="text-align: right;" im-insert="true">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
-                                            <div class="form-group" data-children-count="1">
-                                                <label>Project End Date<small class="text-muted" data-children-count="0"></small>
-                                                </label>
-                                                <input type="date" class="form-control date-inputmask" id="date-mask-2" placeholder="dd/mm/yyyy" style="text-align: right;" im-insert="true">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                                        <div class="form-group" data-children-count="1">
-                                            <label for="exampleFormControlTextarea1">Project Detail</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" spellcheck="false"></textarea>
-                                        </div>
-                                        </div>
-
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
-                                            <button type="button" class="btn btn-primary" id="right-panel-link" href="#right-panel">Save</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                            <button type="button" name="insertUserData" class="btn btn-primary">Create</button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
+                            <!-- Button trigger modal -->
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-2">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProject">
+                                        Create Project
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
                         </div>
                     </div>
 
@@ -233,11 +257,14 @@
                                         <td>12.03.2020-12.09.2020</td>
                                         <td>Marry</td>
                                         <td>Pending</td>
-                                        <td>
+                                        <td class="actions">
                                             <div class="btn-group ml-auto" >
-                                                <button class="btn btn-sm btn-outline-light" >Update</button>
-                                                <button class="btn btn-sm btn-outline-light">Delete</button>
-                                                <button class="btn btn-sm btn-outline-light">Complete</button>
+
+                                            <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></a>
+                                            <a href="" class="delete-row"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>
+                                            <a href=""><button type="button" class="btn btn-primary btn-sm">Complete</button></a>
+
+
                                             </div>
                                         </td>
                                     </tr>
@@ -249,11 +276,14 @@
                                         <td>11.03.2020-11.09.2020</td>
                                         <td>Harry</td>
                                         <td>In Progress</td>
-                                        <td>
-                                            <div class="btn-group ml-auto">
-                                                <button class="btn btn-sm btn-outline-light">Update</button>
-                                                <button class="btn btn-sm btn-outline-light">Delete</button>
-                                                <button class="btn btn-sm btn-outline-light">Complete</button>
+                                        <td class="actions">
+                                            <div class="btn-group ml-auto" >
+
+                                                <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></a>
+                                                <a href="" class="delete-row"><button type="button" class="btn btn-danger btn-sm">Delete</button></a>
+                                                <a href=""><button type="button" class="btn btn-primary btn-sm">Complete</button></a>
+
+
                                             </div>
                                         </td>
                                     </tr>
